@@ -1,80 +1,128 @@
 ---
-title: "Quickstart"
-description: "Start building awesome documentation in minutes"
+title: Quick Start
+description: 'Create your first project in under 5 minutes'
 ---
 
-## Get started in three steps
+## Create Your Account
 
-Get your documentation site running locally and make your first customization.
+<Steps>
+  <Step title="Sign Up">
+    Visit [scriptkit.ai](https://scriptkit.ai) and click **Sign Up**. You can register with your email or sign in with Google.
+  </Step>
+  <Step title="Verify Email">
+    Check your inbox for a verification email and click the link to confirm your account.
+  </Step>
+  <Step title="Choose a Plan">
+    Select a subscription plan that fits your needs. All plans include AI image and video generation.
+  </Step>
+</Steps>
 
-### Step 1: Set up your local environment
+## Your First Project
 
-<AccordionGroup>
-  <Accordion icon="copy" title="Clone your docs locally">
-    During the onboarding process, you created a GitHub repository with your docs content if you didn't already have one. You can find a link to this repository in your [dashboard](https://dashboard.mintlify.com).
-    
-    To clone the repository locally so that you can make and preview changes to your docs, follow the [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) guide in the GitHub docs.
-  </Accordion>
-  <Accordion icon="rectangle-terminal" title="Start the preview server">
-    1. Install the Mintlify CLI: `npm i -g mint`
-    2. Navigate to your docs directory and run: `mint dev`
-    3. Open `http://localhost:3000` to see your docs live!
-    
-    <Tip>Your preview updates automatically as you edit files.</Tip>
-  </Accordion>
-</AccordionGroup>
+### Option 1: Upload a Script
 
-### Step 2: Deploy your changes
+If you have an existing script (SRT, VTT, or text file):
 
-<AccordionGroup>
-  <Accordion icon="github" title="Install our GitHub app">
-    Install the Mintlify GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app).
-    
-    Our GitHub app automatically deploys your changes to your docs site, so you don't need to manage deployments yourself.
-</Accordion>
-<Accordion icon="palette" title="Update your site name and colors">
-    For a first change, let's update the name and colors of your docs site.
+1. From your dashboard, click **New Script**
+2. Select **Upload Script**
+3. Choose your file and click **Upload**
+4. Your script will be parsed into individual clips automatically
 
-    1. Open `docs.json` in your editor.
-    2. Change the `"name"` field to your project name.
-    3. Update the `"colors"` to match your brand.
-    4. Save and see your changes instantly at `http://localhost:3000`.
+<Tip>
+SRT files work best because they include timing information for each line, making it easier to sync assets with your video.
+</Tip>
 
-    <Tip>Try changing the primary color to see an immediate difference!</Tip>
-  </Accordion>
-</AccordionGroup>
+### Option 2: Start from Scratch
 
-### Step 3: Go live
+To create a project without an existing script:
 
-<Accordion icon="rocket" title="Publish your docs">
-  1. Commit and push your changes.
-  2. Your docs will update and be live in moments!
-</Accordion>
+1. Click **New Script** from your dashboard
+2. Select **Start from Scratch**
+3. Enter a project name
+4. Add clips manually using the **Add Clip** button
 
-## Next steps
+## Generate Your First Asset
 
-Now that you have your docs running, explore these key features:
+<Steps>
+  <Step title="Select a Clip">
+    Click on any clip in your script to open the AI chat interface.
+  </Step>
+  <Step title="Describe Your Vision">
+    Type a description of the image or video you want. Be specific about style, mood, and composition:
+    ```
+    A cinematic wide shot of a sunset over mountain peaks,
+    golden hour lighting, dramatic clouds, 8K quality
+    ```
+  </Step>
+  <Step title="Generate">
+    Press Enter or click Send. The AI will generate 3 image variations for you to choose from.
+  </Step>
+  <Step title="Select or Regenerate">
+    - Click on an image to select it as your chosen asset
+    - Click **Save to Vault** to keep it for later
+    - Ask for modifications if you want changes
+  </Step>
+</Steps>
+
+## Understanding the Interface
+
+### Script View
+
+The main workspace where you see all your clips organized. Each clip shows:
+- **Text**: The script line or dialogue
+- **Thumbnail**: Preview of the selected asset (if any)
+- **Status**: Whether assets have been generated
+
+### AI Chat
+
+The right panel where you interact with the AI:
+- **Text Input**: Describe what you want
+- **Model Selector**: Choose between different AI models
+- **History**: Previous generations and conversations
+
+### Storyboard Mode
+
+Toggle to see your entire script as a visual grid:
+- Each cell represents a clip
+- See all your generated assets at a glance
+- Great for reviewing visual consistency
+
+## Working with Generated Assets
+
+### Images
+
+When you generate images, you get 3 variations. You can:
+- **Select** an image to mark it as your chosen asset for that clip
+- **Save to Vault** to keep it in your asset library
+- **Regenerate** to get new variations
+- **Edit** to make adjustments (remix, upscale, etc.)
+
+### Videos
+
+Video generation creates a 5-second clip from your prompt or from an image. Videos use more credits than images but bring your scenes to life.
+
+```
+Generate a video of waves crashing on a beach at sunset,
+slow motion, cinematic
+```
+
+<Info>
+Videos can also be generated from images. Select an image and ask the AI to "animate this" or "create a video from this image."
+</Info>
+
+## Next Steps
 
 <CardGroup cols={2}>
-
-<Card title="Write Content" icon="pen-to-square" href="/essentials/markdown">
-  Learn MDX syntax and start writing your documentation.
-</Card>
-
-<Card title="Customize style" icon="palette" href="/essentials/settings">
-  Make your docs match your brand perfectly.
-</Card>
-
-<Card title="Add code examples" icon="square-code" href="/essentials/code">
-  Include syntax-highlighted code blocks.
-</Card>
-
-<Card title="API documentation" icon="code" href="/api-reference/introduction">
-  Auto-generate API docs from OpenAPI specs.
-</Card>
-
+  <Card title="Scripts & Clips" icon="file-lines" href="/scripts-and-clips">
+    Learn how to organize your projects effectively
+  </Card>
+  <Card title="AI Generation" icon="wand-magic-sparkles" href="/ai-generation">
+    Master prompting for better results
+  </Card>
+  <Card title="Storyboard Mode" icon="table-cells" href="/storyboard">
+    Visualize your entire project
+  </Card>
+  <Card title="Asset Vault" icon="vault" href="/vault">
+    Organize and reuse your assets
+  </Card>
 </CardGroup>
-
-<Note>
-  **Need help?** See our [full documentation](https://mintlify.com/docs) or join our [community](https://mintlify.com/community).
-</Note>

@@ -1,0 +1,233 @@
+---
+title: AI Generation
+description: 'Generate stunning images and videos with AI'
+---
+
+## Overview
+
+ScriptKit uses state-of-the-art AI models to generate images and videos from text descriptions. The AI chat interface makes it easy to describe what you want and iterate until you get the perfect result.
+
+## Image Generation
+
+### Basic Generation
+
+Click on any clip and describe the image you want:
+
+```
+A sunset over the ocean with dramatic orange and pink clouds
+```
+
+The AI generates **3 variations** for you to choose from. You can:
+- **Select** one as your chosen asset
+- **Save to Vault** for later use
+- **Regenerate** for new variations
+- **Edit** to modify a specific image
+
+### Writing Effective Prompts
+
+Better prompts lead to better results. Include:
+
+<CardGroup cols={2}>
+  <Card title="Subject" icon="image">
+    What is the main focus? Person, object, landscape?
+  </Card>
+  <Card title="Style" icon="palette">
+    Cinematic, cartoon, photorealistic, watercolor?
+  </Card>
+  <Card title="Lighting" icon="sun">
+    Golden hour, studio lighting, dramatic shadows?
+  </Card>
+  <Card title="Mood" icon="face-smile">
+    Energetic, peaceful, mysterious, professional?
+  </Card>
+</CardGroup>
+
+**Example of a detailed prompt:**
+```
+A professional business woman in a modern office,
+photorealistic style, soft natural lighting from large windows,
+confident and approachable mood, shallow depth of field,
+4K quality, clean corporate aesthetic
+```
+
+### Prompt Modifiers
+
+Add these to refine your results:
+
+| Modifier | Effect |
+|----------|--------|
+| `4K`, `8K` | Higher quality/detail |
+| `cinematic` | Movie-like composition |
+| `photorealistic` | Photo-like quality |
+| `dramatic lighting` | High contrast |
+| `soft lighting` | Even, gentle light |
+| `shallow depth of field` | Blurred background |
+| `wide shot` | Shows more environment |
+| `close-up` | Focuses on subject |
+
+### Reference Images
+
+Upload a reference image to guide the generation:
+
+1. Click the image icon in the chat
+2. Upload your reference image
+3. Describe how you want to use it:
+   - "Generate something similar to this style"
+   - "Use these colors but with a different subject"
+   - "Create a variation of this scene"
+
+## Video Generation
+
+### Text-to-Video
+
+Generate video directly from a text description:
+
+```
+Waves crashing on a beach at sunset, slow motion, cinematic
+```
+
+Videos are typically 5 seconds long and use more credits than images.
+
+### Image-to-Video
+
+Animate an existing image:
+
+1. Generate or select an image
+2. Ask: "Animate this image" or "Create a video from this"
+3. Optionally specify motion: "Add gentle camera movement" or "Make the clouds move"
+
+<Tip>
+Image-to-video often produces more consistent results since the AI has a clear visual reference.
+</Tip>
+
+### Video Styles
+
+Specify the type of motion you want:
+
+| Style | Description |
+|-------|-------------|
+| `slow motion` | Slowed down footage |
+| `timelapse` | Sped up footage |
+| `camera pan` | Side-to-side movement |
+| `camera zoom` | In or out movement |
+| `static shot` | No camera movement |
+| `drone shot` | Aerial perspective |
+
+## AI Models
+
+ScriptKit offers multiple AI models with different strengths:
+
+### Image Models
+
+| Model | Best For |
+|-------|----------|
+| **Standard** | General purpose, fast generation |
+| **HD** | Higher resolution, more detail |
+| **Creative** | Artistic, stylized images |
+
+### Video Models
+
+| Model | Best For |
+|-------|----------|
+| **Standard** | Quick previews, fast turnaround |
+| **Pro** | Higher quality, smoother motion |
+
+<Info>
+Model availability depends on your subscription plan. Professional and Studio plans include access to all premium models.
+</Info>
+
+## Generation Settings
+
+### Aspect Ratio
+
+Choose the shape of your output:
+
+- **16:9** - Widescreen (YouTube, presentations)
+- **9:16** - Vertical (TikTok, Reels, Stories)
+- **1:1** - Square (Instagram posts)
+- **4:5** - Portrait (Instagram feed)
+
+### Number of Variations
+
+By default, image generation creates 3 variations. You can request more:
+
+```
+Generate 5 variations of a mountain landscape at dawn
+```
+
+## Editing Generated Assets
+
+### Remix
+
+Modify an existing image with new instructions:
+
+1. Select the image you want to change
+2. Describe the modification: "Make it nighttime" or "Add snow"
+3. The AI creates a new version based on your changes
+
+### Upscale
+
+Increase the resolution of an image:
+
+1. Click on an image
+2. Select **Upscale**
+3. Choose the scale factor (2x, 4x)
+
+### Inpainting
+
+Edit specific parts of an image:
+
+1. Select the image
+2. Click **Edit**
+3. Draw over the area you want to change
+4. Describe what should replace it
+
+## Credit Usage
+
+Different operations use different amounts of credits:
+
+| Operation | Approximate Credits |
+|-----------|---------------------|
+| Standard Image (3 variations) | 1-2 credits |
+| HD Image (3 variations) | 2-4 credits |
+| Video (5 seconds) | 50-80 credits |
+| Image Remix | 1-2 credits |
+| Upscale | 1 credit |
+
+<Warning>
+Video generation uses significantly more credits than images. Check your balance before generating multiple videos.
+</Warning>
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Start with images, then video">
+    Generate and perfect your images first, then animate the ones you love. This saves credits and ensures quality.
+  </Accordion>
+  <Accordion title="Be specific">
+    Vague prompts produce generic results. Include details about style, lighting, mood, and composition.
+  </Accordion>
+  <Accordion title="Iterate">
+    Don't expect perfection on the first try. Use regenerate, remix, and editing to refine your results.
+  </Accordion>
+  <Accordion title="Save to Vault">
+    When you generate something great, save it to your Vault immediately. You can reuse it across projects.
+  </Accordion>
+  <Accordion title="Use reference images">
+    Reference images help maintain consistency across your project. Upload examples of your desired style.
+  </Accordion>
+</AccordionGroup>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Results don't match my description">
+    Try being more specific. Add details about style, lighting, and composition. Avoid ambiguous terms.
+  </Accordion>
+  <Accordion title="Inconsistent style across clips">
+    Use a consistent default prompt or reference image. Save successful generations to your Vault as references.
+  </Accordion>
+  <Accordion title="Generation takes too long">
+    Video generation can take 1-2 minutes. Image generation should complete in 10-30 seconds. Check your connection if it takes longer.
+  </Accordion>
+</AccordionGroup>

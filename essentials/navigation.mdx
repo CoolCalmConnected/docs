@@ -1,87 +1,260 @@
 ---
-title: 'Navigation'
-description: 'The navigation field in docs.json defines the pages that go in the navigation menu'
-icon: 'map'
+title: Video Editor
+description: 'Create professional videos with the built-in editor'
 ---
 
-The navigation menu is the list of links on every website.
+## Overview
 
-You will likely update `docs.json` every time you add a new page. Pages do not show up automatically.
-
-## Navigation syntax
-
-Our navigation syntax is recursive which means you can make nested navigation groups. You don't need to include `.mdx` in page names.
-
-<CodeGroup>
-
-```json Regular Navigation
-"navigation": {
-  "tabs": [
-    {
-      "tab": "Docs",
-      "groups": [
-        {
-          "group": "Getting Started",
-          "pages": ["quickstart"]
-        }
-      ]
-    }
-  ]
-}
-```
-
-```json Nested Navigation
-"navigation": {
-  "tabs": [
-    {
-      "tab": "Docs",
-      "groups": [
-        {
-          "group": "Getting Started",
-          "pages": [
-            "quickstart",
-            {
-              "group": "Nested Reference Pages",
-              "pages": ["nested-reference-page"]
-            }
-          ]
-        }
-      ]
-    }
-  ]
-}
-```
-
-</CodeGroup>
-
-## Folders
-
-Simply put your MDX files in folders and update the paths in `docs.json`.
-
-For example, to have a page at `https://yoursite.com/your-folder/your-page` you would make a folder called `your-folder` containing an MDX file called `your-page.mdx`.
+ScriptKit includes a full-featured video editor that lets you arrange your generated assets on a timeline, add text overlays, transitions, and export professional videos.
 
 <Warning>
-
-You cannot use `api` for the name of a folder unless you nest it inside another folder. Mintlify uses Next.js which reserves the top-level `api` folder for internal server calls. A folder name such as `api-reference` would be accepted.
-
+The Video Editor is available on **Professional** and **Studio** plans only.
 </Warning>
 
-```json Navigation With Folder
-"navigation": {
-  "tabs": [
-    {
-      "tab": "Docs",
-      "groups": [
-        {
-          "group": "Group Name",
-          "pages": ["your-folder/your-page"]
-        }
-      ]
-    }
-  ]
-}
-```
+## Accessing the Editor
 
-## Hidden pages
+### From Storyboard
 
-MDX files not included in `docs.json` will not show up in the sidebar but are accessible through the search bar and by linking directly to them.
+1. Open your script in Storyboard Mode
+2. Select the clips you want to include
+3. Click **Create Video**
+4. Name your project and choose settings
+5. The editor opens with your assets pre-loaded
+
+### From Dashboard
+
+1. Go to **Projects** in the sidebar
+2. Click **New Video Project**
+3. Choose a script to pull assets from
+4. Configure project settings
+
+## The Editor Interface
+
+### Timeline
+
+The main workspace at the bottom:
+- **Video Track**: Your images and video clips
+- **Audio Track**: Background music and sound effects
+- **Text Track**: Titles, captions, and overlays
+- **Playhead**: Shows current position during preview
+
+### Preview
+
+Live preview of your video at the current playhead position. Use the play button to preview your entire video.
+
+### Asset Library
+
+Access your generated assets:
+- **Project Assets**: Assets from this script
+- **Vault**: Your saved assets from any project
+- **Uploads**: Add external media
+
+### Properties Panel
+
+When you select an item on the timeline:
+- **Position**: X, Y coordinates
+- **Size**: Width, height
+- **Timing**: Start time, duration
+- **Effects**: Filters, opacity, animations
+
+## Working with Clips
+
+### Adding Clips
+
+Drag assets from the library to the timeline:
+- **Images**: Default to 3-second duration
+- **Videos**: Use their natural duration
+- **Audio**: Drag to the audio track
+
+### Trimming
+
+Adjust clip duration:
+1. Select a clip on the timeline
+2. Drag the edges to trim
+3. Or use the Properties panel for precise timing
+
+### Splitting
+
+Divide a clip at the playhead:
+1. Position the playhead where you want to split
+2. Select the clip
+3. Press **S** or click **Split** in the toolbar
+
+### Reordering
+
+Drag clips on the timeline to rearrange. Clips snap to each other for easy alignment.
+
+## Text Overlays
+
+### Adding Text
+
+1. Click **Add Text** in the toolbar
+2. Choose a text style (title, subtitle, caption)
+3. Type your text
+4. Position and time it on the timeline
+
+### Text Styles
+
+| Style | Use Case |
+|-------|----------|
+| **Title** | Large, bold text for introductions |
+| **Subtitle** | Smaller text for descriptions |
+| **Caption** | Dialogue or narration text |
+| **Lower Third** | Name/title graphics |
+
+### Text Animation
+
+Apply entrance and exit animations:
+- Fade in/out
+- Slide from direction
+- Scale up/down
+- Typewriter effect
+
+## Transitions
+
+Add transitions between clips:
+
+1. Select two adjacent clips
+2. Click **Add Transition**
+3. Choose a transition type:
+   - **Fade**: Smooth opacity transition
+   - **Slide**: Push from direction
+   - **Wipe**: Reveal effect
+   - **Zoom**: Scale transition
+
+Drag transition edges to adjust duration.
+
+## Effects & Filters
+
+Apply visual effects to clips:
+
+| Effect | Description |
+|--------|-------------|
+| **Brightness** | Adjust light levels |
+| **Contrast** | Enhance dark/light difference |
+| **Saturation** | Color intensity |
+| **Blur** | Soft focus effect |
+| **Vignette** | Darkened edges |
+| **Color Grading** | Cinematic color presets |
+
+## Audio
+
+### Background Music
+
+1. Drag audio to the audio track
+2. Trim to fit your video
+3. Adjust volume in Properties
+
+### Volume Control
+
+- **Clip Volume**: Individual audio level
+- **Fade In/Out**: Gradual volume changes
+- **Ducking**: Auto-lower music when speech plays
+
+<Tip>
+For best results, keep background music at 20-30% volume to not overpower narration.
+</Tip>
+
+## Captions
+
+### Auto-Generated Captions
+
+If your clips have text from the original script:
+
+1. Click **Generate Captions**
+2. Captions are created from clip text with timing
+3. Review and edit as needed
+
+### Manual Captions
+
+Add captions manually:
+1. Click **Add Caption**
+2. Type the text
+3. Adjust timing to match speech
+
+### Caption Styling
+
+Customize caption appearance:
+- Font family and size
+- Text color and background
+- Position (bottom, center, top)
+- Animation style
+
+## Exporting
+
+### Export Settings
+
+| Setting | Options |
+|---------|---------|
+| **Resolution** | 720p, 1080p, 4K |
+| **Frame Rate** | 24, 30, 60 fps |
+| **Quality** | Standard, High, Maximum |
+| **Format** | MP4 (H.264) |
+
+### Export Credits
+
+Export uses credits based on resolution:
+
+| Resolution | Credits |
+|------------|---------|
+| 720p | 5 credits |
+| 1080p | 10 credits |
+| 4K | 25 credits |
+
+### Export Process
+
+1. Click **Export** in the toolbar
+2. Choose resolution and settings
+3. Click **Start Export**
+4. Wait for rendering (progress shown)
+5. Download your video
+
+<Info>
+Rendering happens in the cloud. You can close the browser and return later—your video will be ready.
+</Info>
+
+## Project Management
+
+### Auto-Save
+
+Your project saves automatically as you work. The save indicator shows sync status.
+
+### Versions
+
+Previous versions are preserved:
+1. Click **History** in the menu
+2. Browse previous saves
+3. Restore any version
+
+### Duplicate Project
+
+Create a copy to try different edits:
+1. Click **Project Settings**
+2. Select **Duplicate**
+3. Name the new version
+
+## Storage
+
+Video projects count toward your storage limit:
+
+| Plan | Storage Limit |
+|------|---------------|
+| Professional | 10 GB |
+| Studio | 50 GB |
+
+Storage includes:
+- Generated images
+- Generated videos
+- Exported video files
+
+## Keyboard Shortcuts
+
+| Shortcut | Action |
+|----------|--------|
+| **Space** | Play/Pause |
+| **J/K/L** | Reverse/Pause/Forward |
+| **S** | Split at playhead |
+| **Delete** | Remove selected |
+| **Cmd/Ctrl + Z** | Undo |
+| **Cmd/Ctrl + S** | Save |
+| **Cmd/Ctrl + E** | Export |

@@ -1,88 +1,203 @@
 ---
-title: 'Markdown syntax'
-description: 'Text, title, and styling in standard markdown'
-icon: 'text-size'
+title: Billing & Credits
+description: 'Understand plans, credits, and how usage works'
 ---
 
-## Titles
+## Overview
 
-Best used for section headers.
+ScriptKit uses a subscription + credits model. Your subscription gives you monthly credits to use for AI generations, plus access to features based on your tier.
 
-```md
-## Titles
-```
+## Plans
 
-### Subtitles
+<CardGroup cols={3}>
+  <Card title="Starter" icon="seedling">
+    **$29/month**
+    - 400 credits/month
+    - 2 GB storage
+    - Image generation
+    - Video generation
+    - Premium AI models
+  </Card>
+  <Card title="Professional" icon="rocket">
+    **$89/month** *(Most Popular)*
+    - 1,250 credits/month
+    - 10 GB storage
+    - Everything in Starter
+    - **Video Editor**
+    - Regular support
+  </Card>
+  <Card title="Studio" icon="building">
+    **$199/month**
+    - 3,000 credits/month
+    - 50 GB storage
+    - Everything in Professional
+    - Advanced AI capabilities
+    - Priority support
+  </Card>
+</CardGroup>
 
-Best used for subsection headers.
+### Annual Billing
 
-```md
-### Subtitles
-```
+Save 10% with annual billing:
 
-<Tip>
+| Plan | Monthly | Annual (per month) | Annual Total |
+|------|---------|-------------------|--------------|
+| Starter | $29 | $26 | $313/year |
+| Professional | $89 | $80 | $961/year |
+| Studio | $199 | $179 | $2,149/year |
 
-Each **title** and **subtitle** creates an anchor and also shows up on the table of contents on the right.
+## Credits
 
-</Tip>
+Credits are the currency for AI generations. Different operations cost different amounts.
 
-## Text formatting
+### Credit Costs
 
-We support most markdown formatting. Simply add `**`, `_`, or `~` around text to format it.
+| Operation | Credits |
+|-----------|---------|
+| Standard Image (3 variations) | 1-2 |
+| HD Image (3 variations) | 2-4 |
+| Image Remix/Edit | 1-2 |
+| Image Upscale | 1 |
+| Video Generation (5 sec) | 50-80 |
+| Video Export (720p) | 5 |
+| Video Export (1080p) | 10 |
+| Video Export (4K) | 25 |
 
-| Style         | How to write it   | Result          |
-| ------------- | ----------------- | --------------- |
-| Bold          | `**bold**`        | **bold**        |
-| Italic        | `_italic_`        | _italic_        |
-| Strikethrough | `~strikethrough~` | ~strikethrough~ |
+<Info>
+Exact credit costs vary based on the AI model used and output complexity. The ranges above cover typical usage.
+</Info>
 
-You can combine these. For example, write `**_bold and italic_**` to get **_bold and italic_** text.
+### Checking Your Balance
 
-You need to use HTML to write superscript and subscript text. That is, add `<sup>` or `<sub>` around your text.
+View your credit balance:
+- **Header**: Credits shown in the top navigation
+- **Settings**: Go to **Settings > Billing** for detailed usage
 
-| Text Size   | How to write it          | Result                 |
-| ----------- | ------------------------ | ---------------------- |
-| Superscript | `<sup>superscript</sup>` | <sup>superscript</sup> |
-| Subscript   | `<sub>subscript</sub>`   | <sub>subscript</sub>   |
+### Credit Refresh
 
-## Linking to pages
+Credits refresh on your billing date each month. Unused credits do **not** roll over to the next month.
 
-You can add a link by wrapping text in `[]()`. You would write `[link to google](https://google.com)` to [link to google](https://google.com).
+### Running Low?
 
-Links to pages in your docs need to be root-relative. Basically, you should include the entire folder path. For example, `[link to text](/writing-content/text)` links to the page "Text" in our components section.
+If you run out of credits before your refresh:
+1. **Top Up**: Purchase additional credits
+2. **Upgrade**: Move to a higher plan
+3. **Wait**: Credits refresh on your billing date
 
-Relative links like `[link to text](../text)` will open slower because we cannot optimize them as easily.
+## Credit Top-Ups
 
-## Blockquotes
+Purchase extra credits anytime:
 
-### Singleline
+| Package | Credits | Price |
+|---------|---------|-------|
+| Small | 100 | $10 |
+| Medium | 300 | $25 |
+| Large | 1,000 | $75 |
+| XL | 2,500 | $150 |
 
-To create a blockquote, add a `>` in front of a paragraph.
+Top-up credits:
+- Never expire
+- Are used after monthly credits
+- Can be purchased on any plan
 
-> Dorothy followed her through many of the beautiful rooms in her castle.
+### How to Top Up
 
-```md
-> Dorothy followed her through many of the beautiful rooms in her castle.
-```
+1. Go to **Settings > Billing**
+2. Click **Buy Credits**
+3. Select a package
+4. Complete payment
+5. Credits are added immediately
 
-### Multiline
+## Storage
 
-> Dorothy followed her through many of the beautiful rooms in her castle.
->
-> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
+Each plan includes storage for your generated assets:
 
-```md
-> Dorothy followed her through many of the beautiful rooms in her castle.
->
-> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
-```
+| Plan | Storage |
+|------|---------|
+| Starter | 2 GB |
+| Professional | 10 GB |
+| Studio | 50 GB |
 
-### LaTeX
+### What Counts
 
-Mintlify supports [LaTeX](https://www.latex-project.org) through the Latex component.
+- Generated images
+- Generated videos
+- Exported video files
+- Vault assets
 
-<Latex>8 x (vk x H1 - H2) = (0,1)</Latex>
+### Storage Full?
 
-```md
-<Latex>8 x (vk x H1 - H2) = (0,1)</Latex>
-```
+If you reach your limit:
+- You can't generate new assets
+- Delete unused assets to free space
+- Or upgrade to a higher plan
+
+## Managing Your Subscription
+
+### Change Plan
+
+Upgrade or downgrade anytime:
+1. Go to **Settings > Billing**
+2. Click **Change Plan**
+3. Select new plan
+4. Changes take effect immediately
+
+**Upgrades**: Prorated for the remainder of your billing period
+**Downgrades**: Take effect at next billing date
+
+### Cancel Subscription
+
+1. Go to **Settings > Billing**
+2. Click **Cancel Subscription**
+3. Confirm cancellation
+
+After cancellation:
+- Access continues until billing period ends
+- Data is preserved for 30 days
+- You can resubscribe anytime
+
+### Update Payment
+
+1. Go to **Settings > Billing**
+2. Click **Payment Method**
+3. Update your card or payment details
+
+## Billing History
+
+View all past transactions:
+1. Go to **Settings > Billing**
+2. Click **Billing History**
+3. Download invoices as PDF
+
+## Feature Access by Plan
+
+| Feature | Starter | Professional | Studio |
+|---------|:-------:|:------------:|:------:|
+| Image Generation | Yes | Yes | Yes |
+| Video Generation | Yes | Yes | Yes |
+| Premium AI Models | Yes | Yes | Yes |
+| Storyboard Mode | Yes | Yes | Yes |
+| Asset Vault | Yes | Yes | Yes |
+| Video Editor | - | Yes | Yes |
+| Advanced AI | - | - | Yes |
+| Priority Support | - | - | Yes |
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="Do unused credits roll over?">
+    Monthly subscription credits do not roll over. However, top-up credits never expire and can be used anytime.
+  </Accordion>
+  <Accordion title="Can I get a refund?">
+    We offer refunds within 7 days of your first subscription if you're not satisfied. Contact support for assistance.
+  </Accordion>
+  <Accordion title="What happens to my data if I cancel?">
+    Your data is preserved for 30 days after cancellation. You can export your assets during this period. After 30 days, data is permanently deleted.
+  </Accordion>
+  <Accordion title="Can I pause my subscription?">
+    We don't offer pause, but you can cancel and resubscribe later. Your data is preserved for 30 days.
+  </Accordion>
+  <Accordion title="Do you offer team plans?">
+    Contact us at support@scriptkit.ai for team and enterprise pricing.
+  </Accordion>
+</AccordionGroup>

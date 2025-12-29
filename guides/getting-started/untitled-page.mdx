@@ -1,0 +1,180 @@
+---
+title: Scripts & Clips
+description: 'Understanding the core building blocks of ScriptKit projects'
+---
+
+## Overview
+
+In ScriptKit, your video project is organized into **Scripts** and **Clips**. This structure mirrors traditional video production workflows while enabling AI-powered asset generation.
+
+## What is a Script?
+
+A **Script** is your project container. It represents an entire video project and contains all the clips, generated assets, and settings for that project.
+
+Each script has:
+- **Title**: The name of your project
+- **Clips**: Individual segments of your video
+- **Settings**: Default prompts, aspect ratios, and generation preferences
+- **Generated Assets**: All images and videos created for this project
+
+## What is a Clip?
+
+A **Clip** is a single segment of your video script. Each clip typically represents:
+- A line of dialogue
+- A scene description
+- A subtitle segment (if imported from SRT)
+
+Each clip has:
+- **Text**: The script content or dialogue
+- **Timing**: Start and end times (if from SRT)
+- **Sequence Number**: Position in the script
+- **Generated Assets**: Images and videos for this specific clip
+- **Selected Asset**: The chosen asset to use in the final video
+
+## Creating Scripts
+
+### Upload an SRT/VTT File
+
+The fastest way to create a project:
+
+1. Click **New Script** from your dashboard
+2. Select **Upload Script**
+3. Choose your SRT or VTT file
+4. ScriptKit automatically parses it into clips with timing
+
+<Info>
+SRT files are the most common subtitle format. Each subtitle block becomes a clip with its timing preserved.
+</Info>
+
+### Start from Scratch
+
+For projects without an existing script:
+
+1. Click **New Script**
+2. Select **Start from Scratch**
+3. Enter a project title
+4. Add clips manually
+
+### AI Storyboard
+
+Let AI help you plan your video:
+
+1. Click **New Script**
+2. Select **AI Storyboard**
+3. Describe your video concept
+4. AI generates a structured script outline
+
+## Managing Clips
+
+### Reordering Clips
+
+Drag and drop clips to change their sequence order. The order determines how clips appear in storyboard view and the video editor.
+
+### Merging Clips
+
+Combine multiple clips into one:
+
+1. Select the clips you want to merge
+2. Click **Merge** in the toolbar
+3. The clips are combined with their text concatenated
+
+<Tip>
+Merge short clips that belong to the same scene for easier asset management.
+</Tip>
+
+### Splitting Clips
+
+Divide a clip into multiple segments:
+
+1. Click on the clip to open it
+2. Select **Split Clip** from the menu
+3. Choose where to split the text
+4. Two new clips are created
+
+### Grouping Clips
+
+Organize related clips into groups:
+
+1. Select multiple clips
+2. Click **Group** in the toolbar
+3. Name the group (e.g., "Opening Scene", "Interview Segment")
+
+Groups help you:
+- Navigate large scripts faster
+- Apply bulk actions to related clips
+- Maintain organization in complex projects
+
+## Clip Settings
+
+### Default Prompt
+
+Set a default prompt that applies to all generations for a clip:
+
+```
+Cinematic, 4K quality, professional lighting
+```
+
+This text is automatically appended to your generation prompts.
+
+### Dialogue Field
+
+For clips that contain dialogue, the dialogue field helps AI understand:
+- Who is speaking
+- The emotional tone
+- Context for visual generation
+
+### Aspect Ratio
+
+Set the default aspect ratio for generated assets:
+- **16:9** - Standard widescreen
+- **9:16** - Vertical (TikTok, Reels)
+- **1:1** - Square (Instagram)
+- **4:5** - Portrait (Instagram Feed)
+
+## Bulk Operations
+
+### Generate All
+
+Generate assets for multiple clips at once:
+
+1. Switch to Storyboard view
+2. Select clips (or select all)
+3. Click **Generate All**
+4. AI processes each clip using its text as the prompt
+
+### Apply Settings
+
+Apply settings across multiple clips:
+
+1. Select the clips
+2. Click **Settings** in the toolbar
+3. Choose settings to apply (aspect ratio, default prompt)
+4. Click **Apply to Selected**
+
+## Script Settings
+
+Access script-level settings from the gear icon:
+
+| Setting | Description |
+|---------|-------------|
+| **Title** | Project name |
+| **Default Prompt** | Base prompt for all generations |
+| **Aspect Ratio** | Default aspect ratio for new clips |
+| **Model Preference** | Preferred AI model for this project |
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Keep clips focused">
+    Each clip should represent a single visual scene. If a clip describes multiple scenes, consider splitting it.
+  </Accordion>
+  <Accordion title="Use descriptive text">
+    The clip text helps AI understand context. More descriptive text leads to better generations.
+  </Accordion>
+  <Accordion title="Set project defaults">
+    Configure default prompts and aspect ratios at the script level to maintain consistency.
+  </Accordion>
+  <Accordion title="Group related content">
+    Use groups to organize scenes, acts, or segments for easier navigation.
+  </Accordion>
+</AccordionGroup>
